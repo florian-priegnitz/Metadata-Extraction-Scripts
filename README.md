@@ -55,3 +55,7 @@ In einem nächsten Schritt wurde das Script so erweitert, dass die Metadaten in 
 - CSV-Datei öffnen und bearbeiten: Der Code öffnet die CSV-Datei im Schreibmodus und verwendet die csv.DictWriter-Klasse
 
 Bei den Metadaten gab es einen TypeError: '<' not supported between instances of 'int' and 'str'. Dieser beruhte darauf, dass zuerst versucht wurde, die Tags zu sortieren, obwohl diese sowohl Zeichenketten als auch Ganzzahlen enthalten. Hier mussten 'decoded_tag' in eine Zeichenkette konvertiert werden, bevor es sortiert werden kann: all_tags.add(str(decoded_tag)).
+
+<b>Version 4 "Metadaten von JPG-Bildern auf einer Karte mittels Pin darstellen"</b><br/>
+
+<b>Version 5 "Erweiterung der Bilddaten auf tiff, png und raw"</b><br/>
