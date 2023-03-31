@@ -10,6 +10,7 @@ Funktionsweise
 - Das Skript überprüft, ob das Bild EXIF-Daten enthält, indem es die _getexif()-Funktion aufruft.
 - Falls vorhanden, werden die EXIF-Daten extrahiert und die Tags decodiert, um lesbare Namen für die Metadaten zu erhalten.
 - Zum Schluss gibt das Skript die extrahierten EXIF-Metadaten in der Konsole aus.
+
 Voraussetzungen
 - Um das Skript auszuführen, benötigen Sie die Pillow-Bibliothek.
 
@@ -20,3 +21,10 @@ Hinweis
 Das Skript liest nur die Metadaten von Bildern im JPEG-Format, da nicht alle Bildformate EXIF-Metadaten unterstützen. Wenn das angegebene Bild keine EXIF-Daten enthält oder das Bild nicht geöffnet werden kann, gibt das Skript eine entsprechende Fehlermeldung aus.
 
 <b>Version 2 "Metadaten von einem Ordner mit JPG-Bildern auslesen"</b><br/>
+
+In dieser Version habe ich den Code erweitert, so dass jetzt ganze Folder ausgelesen werden können. 
+- Zuerst wird der User aufgefordert, den Pfad zum Ordner mit den Bildern einzugeben. 
+- Anschließend listet der Code alle Dateien im angegebenen Ordner auf und prüft, ob es sich um eine JPG- oder JPEG-Datei handelt. 
+- Für jedes Bild im Ordner werden die Metadaten ausgelesen und in der Konsole angezeigt.
+
+Der Befehl files = os.listdir(folder_path) verwendet die os-Bibliothek, um eine Liste aller Dateien und Ordner im angegebenen Verzeichnis (folder_path) zu erstellen. Die Liste enthält die Namen der Dateien und Ordner als Zeichenketten. In diesem Fall ist folder_path der Pfad zum Ordner, den der User eingegeben hat.
