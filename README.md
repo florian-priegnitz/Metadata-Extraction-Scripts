@@ -1,11 +1,13 @@
 # Metadaten von Dateien mittels Python Script auslesen und dokumentieren<br/>
-Im Rahmen einer Hausarbeit des Studiums IT Forensik Sommersemester 2022 sollten Metadaten von Images systematisch dokumentiert werden. Aus dieser Arbeit sind diese nPython-Scripts entstanden. Ab Version 4 wurden die Scripts auf Basis des Scripts in Version mittels GPT-4 weiterentwickelt.
+Im Rahmen einer Hausarbeit des Studiums IT Forensik Sommersemester 2022 sollten Metadaten von Images systematisch dokumentiert werden. Aus dieser Arbeit sind diese Python-Scripts entstanden. Ab Version 4 wurden die Scripts auf Basis des Scripts in Version 3 mittels GPT-4 im März 2023 weiterentwickelt, um zu schauen, welche Möglichkeiten GPT-4 bietet.
 
 Ein erstes Ziel war es mittels Bash in Linux das Script bei der Analyse von sichergestellten Images zu nutzen, um damit Metadaten von Dateien systematisch und schnell zu dokumentieren. 
 Langfristig möchte ich das Script so umbauen, dass ich größere Medienmengen damit auswerten kann, um die Metadaten dann z.B. mittels CSV in eine Datenbank zu Überführen.
 
 Mein Python-Setup basiert auf dem Setup aus einem Kurs von Jan Schaffranek<br/>
 Link Github <a href="https://github.com/franneck94/UdemyPythonIntro"> Jan Schaffrannek Udemy Python Intro</a>
+Ich habe entsprechend die Requirements von Jan Schaffranek und um eigene für die Scripts ergänzt.
+
 
 <b>Einsatz von GPT-4</b><br/>
 An dieser Stelle mache ich den Einsatz von GPT-4 kenntlich. Aktuell habe ich keinen Plattformzugriff sondern nutze GPT-4 über die normale Chatfunktion. GPT 3.5 Legacy und Default kamen nicht zum Einsatz. Wenn ich Scripts neu erstelle, nutze ich GPT-4 für das Debugging, für das Überprüfen des Scripts im Allgemeinen. Ich mache auf den Einsatz deswegen aufmerksam, weil es mir hilft beim Scripten, weil es gute wissenschaftliche Praxis ist, transparent zu arbeiten.
