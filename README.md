@@ -1,2 +1,2 @@
 # metadaten-von-dateien-mittels-python-script-auslesen
-Im Rahmen einer Hausarbeit des Studium IT Forensik sollen Metadaten von Images dokumentiert werden. Ziel ist es mittels Bash in Linux das Script bei der Analyse von Images zu nutzen, Metadaten systematisch und schnell zu dokumentieren.
+Im Rahmen einer Hausarbeit des Studium IT Forensik sollen Metadaten von Images systematisch dokumentiert werden. Ein erstes Ziel ist es mittels Bash in Linux das Script bei der Analyse von sichergestellten Images zu nutzen, um damit Metadaten von Dateien systematisch und schnell zu dokumentieren. Langfristig möchte ich ein Script bauen so bauen, dass ich ganze Folder oder Laufwerke damit auswerten kann, um die Metadaten dann z.B. mittels CSV in eine Datenbank zu Überführen.
