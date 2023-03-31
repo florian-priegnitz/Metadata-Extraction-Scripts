@@ -23,6 +23,7 @@ Funktionsweise
 - Das Skript überprüft, ob das Bild EXIF-Daten enthält, indem es die _getexif()-Funktion aufruft.
 - Falls vorhanden, werden die EXIF-Daten extrahiert und die Tags decodiert, um lesbare Namen für die Metadaten zu erhalten.
 - Zum Schluss gibt das Skript die extrahierten EXIF-Metadaten in der Konsole aus.
+- Mittels os wird überprüft, die angegebene Bilddatei ein JPG-Datei ist.
 
 Voraussetzungen
 - Um das Skript auszuführen, benötigen Sie die Pillow-Bibliothek.
