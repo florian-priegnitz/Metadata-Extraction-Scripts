@@ -1,5 +1,6 @@
 # Metadaten von Dateien mittels Python Script auslesen und dokumentieren<br/>
-Im Rahmen einer Hausarbeit des Studiums IT Forensik Sommersemester 2022 sollten Metadaten von Images systematisch dokumentiert werden. Aus dieser Arbeit ist dieses python-Script entstanden.
+Im Rahmen einer Hausarbeit des Studiums IT Forensik Sommersemester 2022 sollten Metadaten von Images systematisch dokumentiert werden. Aus dieser Arbeit sind diese nPython-Scripts entstanden. Ab Version 4 wurden die Scripts auf Basis des Scripts in Version mittels GPT-4 weiterentwickelt.
+
 Ein erstes Ziel war es mittels Bash in Linux das Script bei der Analyse von sichergestellten Images zu nutzen, um damit Metadaten von Dateien systematisch und schnell zu dokumentieren. 
 Langfristig möchte ich das Script so umbauen, dass ich größere Medienmengen damit auswerten kann, um die Metadaten dann z.B. mittels CSV in eine Datenbank zu Überführen.
 
