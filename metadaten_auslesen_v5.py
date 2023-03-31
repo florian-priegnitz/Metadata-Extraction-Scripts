@@ -4,10 +4,10 @@ import time
 from PIL import Image
 from PIL.ExifTags import TAGS
 
+# Funktion zum Extrahieren der EXIF-Daten aus dem Bild
 def get_exif_data(file_path):
     exif_data = {}
 
-    # Bild öffnen und prüfen, ob es EXIF-Daten hat
     try:
         image = Image.open(file_path)
         if hasattr(image, '_getexif'):
@@ -31,7 +31,7 @@ files = os.listdir(folder_path)
 metadata_list = []
 all_tags = set()
 
-# Metadaten für jedes unterstützte Bild extrahieren
+# Durchlaufen aller Dateien im Ordner
 for file in files:
     file_path = os.path.join(folder_path, file)
 
@@ -39,6 +39,7 @@ for file in files:
     if file_path.lower().endswith(('.jpg', '.jpeg', '.tiff', '.tif', '.png', '.nef', '.cr2', '.arw', '.dng')):
         print(f"\nMetadaten für Bild: {file}")
 
+        # Metadaten aus Bild extrahieren
         exif_data = get_exif_data(file_path)
         metadata_list.append((file, exif_data))
         all_tags.update(exif_data.keys())
@@ -54,7 +55,7 @@ csv_file_path = os.path.join(desktop_path, csv_file_name)
 
 # CSV-Datei öffnen und Schreibzugriff erhalten
 with open(csv_file_path, "w", newline="", encoding="utf-8") as csvfile:
-    fieldnames = ["Bild"] + sorted(list(all_tags))
+    fieldnames = ["Bild"] + sorted(list(all_tags), key=lambda x: str(x))  # Sortierung basierend auf der String-Repräsentation der Elemente
     csv_writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
 
     # CSV-Header schreiben
