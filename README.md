@@ -2,6 +2,7 @@
 Im Rahmen einer Hausarbeit des Studiums IT Forensik sollen Metadaten von Images systematisch dokumentiert werden. Ein erstes Ziel ist es mittels Bash in Linux das Script bei der Analyse von sichergestellten Images zu nutzen, um damit Metadaten von Dateien systematisch und schnell zu dokumentieren. Langfristig möchte ich ein Script so bauen, dass ich ganze Folder oder Laufwerke damit auswerten kann, um die Metadaten dann z.B. mittels CSV in eine Datenbank zu Überführen.
 
 <b>Version 1 "Metadaten von einem JPG-Bild auslesen"</b><br/>
+
 Dieses Python-Skript liest die EXIF-Metadaten eines Bildes aus und zeigt sie in der Konsole. Das Skript verwendet hierfür die Pillow-Bibliothek zur Verarbeitung von Bildern und zum Auslesen von EXIF-Daten (Wichtig: pip install Pillow).
 
 Funktionsweise
@@ -29,4 +30,12 @@ In dieser Version habe ich den Code erweitert, so dass jetzt ganze Folder ausgel
 
 Der Befehl files = os.listdir(folder_path) verwendet die os-Bibliothek, um eine Liste aller Dateien und Ordner im angegebenen Verzeichnis (folder_path) zu erstellen. Die Liste enthält die Namen der Dateien und Ordner als Zeichenketten. In diesem Fall ist folder_path der Pfad zum Ordner, den der User eingegeben hat.
 
-<b>Version 3 "Metadaten von JPG-Bildern in eine CSV-Datei schreiben"</b><br/>
+<b>Version 3 "Metadaten von JPG-Bildern in eine CSV-Datei schreiben und auf dem Desktop ablegen"</b><br/>
+
+In einem nächsten Schritt wurde das Script so erweitert, dass die Metadaten in eine CSV-Datei gespeichert wurden.
+
+- CSV-Bibliothek importieren: Die csv-Bibliothek wird importiert, um die CSV-Datei einfach zu erstellen und zu bearbeiten.
+- Pfad zum Desktop-Ordner erstellen: Der Code erstellt den Pfad zum Desktop-Ordner "Auswertung_Metadaten" und verwendet os.makedirs() mit exist_ok=True, um den Ordner zu erstellen, falls er noch nicht existiert.
+- Timestamp erstellen: Der Timestamp wird mit der time-Bibliothek erstellt und im Dateinamen der CSV-Datei verwendet, um eine eindeutige Datei für jede Ausführung des Skripts zu erstellen.
+- Extrahieren und Speichern von Tags: Der Code extrahiert die Tags aus den Metadaten und speichert sie in einer Menge namens all_tags. Die Menge stellt sicher, dass die Tags eindeutig sind. Da die Tags sowohl Zeichenketten als auch Ganzzahlen enthalten können, konvertieren wir sie in Zeichenketten, bevor wir sie der Menge hinzufügen und sortieren.
+- CSV-Datei öffnen und bearbeiten: Der Code öffnet die CSV-Datei im Schreibmodus und verwendet die csv.DictWriter-Klasse
