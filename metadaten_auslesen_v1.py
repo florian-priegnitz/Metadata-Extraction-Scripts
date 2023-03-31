@@ -1,15 +1,21 @@
 from PIL import Image
 from PIL.ExifTags import TAGS
+import os
 
 # Benutzer auffordern, den Pfad zum Bild einzugeben
 print("Bitte geben Sie den Pfad zum Bild ein:")
 file_path = input()
 
-# Bild öffnen
-try:
-    image = Image.open(file_path)
-except Exception as e:
-    print(f"Fehler beim Öffnen des Bildes: {e}")
+# Überprüfen, ob die Datei existiert und die Dateiendung .jpg oder .jpeg hat
+if not os.path.exists(file_path) or not file_path.lower().endswith(('.jpg', '.jpeg')):
+    print("Die angegebene Datei existiert nicht oder hat eine ungültige Dateiendung. Bitte überprüfen Sie den Pfad und die Dateiendung (.jpg oder .jpeg).")
+
+else:
+    # Bild öffnen
+    try:
+        image = Image.open(file_path)
+    except Exception as e:
+        print(f"Fehler beim Öffnen des Bildes: {e}")
 
 # Prüfen, ob das Bild EXIF-Daten hat und diese auslesen
 if hasattr(image, '_getexif'):
