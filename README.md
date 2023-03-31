@@ -28,3 +28,5 @@ In dieser Version habe ich den Code erweitert, so dass jetzt ganze Folder ausgel
 - Für jedes Bild im Ordner werden die Metadaten ausgelesen und in der Konsole angezeigt.
 
 Der Befehl files = os.listdir(folder_path) verwendet die os-Bibliothek, um eine Liste aller Dateien und Ordner im angegebenen Verzeichnis (folder_path) zu erstellen. Die Liste enthält die Namen der Dateien und Ordner als Zeichenketten. In diesem Fall ist folder_path der Pfad zum Ordner, den der User eingegeben hat.
+
+<b>Version 3 "Metadaten von JPG-Bildern in eine CSV-Datei schreiben"</b><br/>
