@@ -1,7 +1,7 @@
 # metadaten-von-dateien-mittels-python-script-auslesen
 Im Rahmen einer Hausarbeit des Studiums IT Forensik sollen Metadaten von Images systematisch dokumentiert werden. Ein erstes Ziel ist es mittels Bash in Linux das Script bei der Analyse von sichergestellten Images zu nutzen, um damit Metadaten von Dateien systematisch und schnell zu dokumentieren. Langfristig möchte ich ein Script so bauen, dass ich ganze Folder oder Laufwerke damit auswerten kann, um die Metadaten dann z.B. mittels CSV in eine Datenbank zu Überführen.
 
-<b>Version 1 "Metadaten von einem Bild auslesen"</b>
+<b>Version 1 "Metadaten von einem Bild auslesen"</b><br/>
 Dieses Python-Skript liest die EXIF-Metadaten eines Bildes aus und zeigt sie in der Konsole. Das Skript verwendet hierfür die Pillow-Bibliothek zur Verarbeitung von Bildern und zum Auslesen von EXIF-Daten (Wichtig: pip install Pillow).
 
 Funktionsweise
