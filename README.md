@@ -39,3 +39,5 @@ In einem nächsten Schritt wurde das Script so erweitert, dass die Metadaten in 
 - Timestamp erstellen: Der Timestamp wird mit der time-Bibliothek erstellt und im Dateinamen der CSV-Datei verwendet, um eine eindeutige Datei für jede Ausführung des Skripts zu erstellen.
 - Extrahieren und Speichern von Tags: Der Code extrahiert die Tags aus den Metadaten und speichert sie in einer Menge namens all_tags. Die Menge stellt sicher, dass die Tags eindeutig sind. Da die Tags sowohl Zeichenketten als auch Ganzzahlen enthalten können, konvertieren wir sie in Zeichenketten, bevor wir sie der Menge hinzufügen und sortieren.
 - CSV-Datei öffnen und bearbeiten: Der Code öffnet die CSV-Datei im Schreibmodus und verwendet die csv.DictWriter-Klasse
+
+Bei den Metadaten gab es einen TypeError: '<' not supported between instances of 'int' and 'str'. Dieser beruhte darauf, dass zuerst versucht wurde, die Tags zu sortieren, obwohl diese sowohl Zeichenketten als auch Ganzzahlen enthalten. Hier mussten 'decoded_tag' in eine Zeichenkette konvertiert werden, bevor es sortiert werden kann: all_tags.add(str(decoded_tag)).
