@@ -3,6 +3,8 @@ ipython
 ipykernel
 numpy
 matplotlib
+Pillow
+folium
 
 # Linting
 pylint
