@@ -6,6 +6,13 @@ Langfristig möchte ich das Script so umbauen, dass ich größere Medienmengen d
 Mein Python-Setup basiert auf dem Setup aus einem Kurs von Jan Schaffranek<br/>
 Link Github <a href="https://github.com/franneck94/UdemyPythonIntro"> Jan Schaffrannek Udemy Python Intro</a>
 
+<b>Einsatz von GPT-4</b><br/>
+An dieser Stelle mache ich den Einsatz von GPT-4 kenntlich. Wenn ich Scripts neu erstelle, nutze ich GPT-4 für das Debugging, für das Überprüfen des Scripts im Allgemeinen. Ich mache auf den Einsatz deswegen aufmerksam, weil es mir hilft beim Scripten, weil es gute wissenschaftliche Praxis ist, transparent zu arbeiten.
+
+- Ich habe alle veröffentlichten Scripts noch einmal mittels GPT-4 überprüfen lassen.
+- Es wurden Änderungen an den Scripts vorgenommen, woraus ich lernen konnte.
+- GPT-4 hat mir vorgeschlagen, eher modular zu programmieren, so dass Details in Funktionen ausgelagert werden; diese Versionen werde ich hier ebenfalls veröffentlichen.
+
 <b>Version 1 "Metadaten von einem JPG-Bild auslesen"</b><br/>
 
 Dieses Python-Skript liest die EXIF-Metadaten eines Bildes aus und zeigt sie in der Konsole. Das Skript verwendet hierfür die Pillow-Bibliothek zur Verarbeitung von Bildern und zum Auslesen von EXIF-Daten (Wichtig: pip install Pillow).
