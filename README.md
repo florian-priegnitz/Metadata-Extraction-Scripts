@@ -10,7 +10,7 @@ Ich habe entsprechend die Requirements von Jan Schaffranek und um eigene für di
 
 
 <b>Einsatz von GPT-4</b><br/>
-An dieser Stelle mache ich den Einsatz von GPT-4 kenntlich. Aktuell habe ich keinen Plattformzugriff sondern nutze GPT-4 über die normale Chatfunktion. GPT 3.5 Legacy und Default kamen nicht zum Einsatz. Wenn ich Scripts neu erstelle, nutze ich GPT-4 für das Debugging, für das Überprüfen des Scripts im Allgemeinen. Ich mache auf den Einsatz deswegen aufmerksam, weil es mir hilft beim Scripten, weil es gute wissenschaftliche Praxis ist, transparent zu arbeiten.
+An dieser Stelle mache ich den Einsatz von GPT-4 kenntlich. Aktuell habe ich keinen Plattformzugriff sondern nutze GPT-4 über die normale Chatfunktion. GPT 3.5 Legacy und Default kamen nicht zum Einsatz. Wenn ich Scripts neu erstelle, nutze ich GPT-4 für das Debugging, für das Überprüfen des Scripts im Allgemeinen. Ich mache auf den Einsatz deswegen aufmerksam, weil es mir hilft beim Scripten und weil es in meinen Augen gute wissenschaftliche Praxis ist, Hilfsmittel transparent zu arbeiten.
 
 - Ich habe alle veröffentlichten Scripts noch einmal mittels GPT-4 überprüfen lassen.
 - Es wurden Änderungen an den Scripts vorgenommen, woraus ich lernen konnte.
