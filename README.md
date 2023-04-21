@@ -1,4 +1,4 @@
-# Metadata Extraction Scripts
+# Metadata Extraction Sripts
 
 Dieses Repository enthält eine Sammlung von Python-Skripten zur Extraktion von Metadaten aus verschiedenen Dateitypen. Das Hauptziel dieser Skripte ist es, die Metadaten der Dateien auszulesen und sie in einer leicht lesbaren Form anzuzeigen.
 
@@ -95,3 +95,12 @@ C:/Users/User/Desktop/Auswertung_Geodaten/image_map.html
 ## Script 5) Geodaten von Bildern auf einer Karte als verbundene Pin anzeigen
 
 Das Python-Skript `display_jpg_geodata_on_map_connected.py`funktioniert wie Script 4. Jedoch werden Pins mit dem gleichen Tagesdatum miteinander verbunden.
+
+## Script 6) Extrahieren und Exportieren von Metadaten für verschiedene Bildformate
+
+Das Python-Skript `export_metadaten_jpg_png_raw_tiff_to_csv.py` extrahiert die EXIF-Metadaten für verschiedene Bildformate (.jpg, .jpeg, .tiff, .tif, .png, .nef, .cr2, .arw, .dng) aus einem angegebenen Ordner und exportiert sie in eine CSV-Datei. Die CSV-Datei wird im Ordner "Auswertung_Metadaten" auf dem Desktop gespeichert.
+
+### Verwendung
+
+Das Script kann analog wie die anderen Skripts verwendet werden.  Die erstellte CSV-Datei enthält alle Metadaten der unterstützten Bildformate im angegebenen Ordner.
+
