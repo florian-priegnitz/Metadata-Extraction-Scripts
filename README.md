@@ -2,7 +2,7 @@
 
 Dieses Repository enthält eine Sammlung von Python-Skripten zur Extraktion von Metadaten aus verschiedenen Dateitypen. Das Hauptziel dieser Skripte ist es, die Metadaten der Dateien auszulesen und sie in einer leicht lesbaren Form anzuzeigen.
 
-## Script1) Exif Metadaten aus JPG-Bild-Datei auslesen
+## Script 1) Exif Metadaten aus JPG-Bild-Datei auslesen
 
 Mit dem Python-Skript `extract_jpg_metadata.py` können die Metadaten von einer JPG-Datei ausgelesen werden. Hierbei werden die EXIF-Metadaten aus der Bilddatei und mittels print Befehl angezeigt.
 
@@ -59,6 +59,6 @@ Pfadangabe:
 
 Metadaten werden dann wie folgt ausgegeben und abgespeichert: 
 ```PYTHON
-/Users/username/Desktop/Auswertung_Metadaten/Metadaten_2023-04-21_12-30-45.csv 
+/Users/username/Desktop/Auswertung_Metadaten/Metadaten_2023-04-04_12-30-45.csv 
 ```
 
