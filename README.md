@@ -91,3 +91,7 @@ Ein neuer Tab im Webbrowser wird geöffnet und zeigt die Karte mit den Geodaten 
 ```PYTHON
 C:/Users/User/Desktop/Auswertung_Geodaten/image_map.html
 ```
+
+## Script 5) Geodaten von Bildern auf einer Karte als verbundene Pin anzeigen
+
+Das Python-Skript `display_jpg_geodata_on_map_connected.py`funktioniert wie Script 4. Jedoch werden Pins mit dem gleichen Tagesdatum miteinander verbunden.
