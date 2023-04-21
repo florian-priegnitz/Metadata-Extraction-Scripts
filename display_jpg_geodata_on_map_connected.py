@@ -6,7 +6,25 @@ from PIL.ExifTags import TAGS
 from datetime import datetime
 
 def get_lat_lon_from_gps_info(gps_info):
-    # (bereits vorhandener Code für diese Funktion)
+    latitude = gps_info.get(2, None)
+    longitude = gps_info.get(4, None)
+    lat_ref = gps_info.get(1, None)
+    lon_ref = gps_info.get(3, None)
+
+    if not latitude or not longitude:
+        return None
+
+    lat_deg, lat_min, lat_sec = latitude
+    lon_deg, lon_min, lon_sec = longitude
+    lat = lat_deg + (lat_min / 60) + (lat_sec / 3600)
+    lon = lon_deg + (lon_min / 60) + (lon_sec / 3600)
+
+    if lat_ref == "S":
+        lat = -lat
+    if lon_ref == "W":
+        lon = -lon
+
+    return lat, lon
 
 print("Bitte geben Sie den Pfad zum Ordner mit den Bildern ein:")
 folder_path = input()
@@ -20,18 +38,35 @@ geo_data_list = []
 total_count = 0
 
 for file in files:
-    # (bereits vorhandener Code für diese Schleife)
+    file_path = os.path.join(folder_path, file)
 
-    if gps_info:
-        lat_lon = get_lat_lon_from_gps_info(gps_info)
-        date_taken = None
+    if file_path.lower().endswith(('.jpg', '.jpeg')):
+        try:
+            image = Image.open(file_path)
 
-        if "DateTimeOriginal" in exif_data:
-            date_taken_str = exif_data["DateTimeOriginal"]
-            date_taken = datetime.strptime(date_taken_str, "%Y:%m:%d %H:%M:%S")
+            if hasattr(image, '_getexif'):
+                exif_info = image._getexif()
+                if exif_info:
+                    exif_data = {}
+                    for tag, value in exif_info.items():
+                        decoded_tag = TAGS.get(tag, tag)
+                        exif_data[decoded_tag] = value
 
-        if lat_lon and date_taken:
-            geo_data_list.append([file, lat_lon[0], lat_lon[1], date_taken])
+                    gps_info = exif_data.get("GPSInfo", None)
+                    if gps_info:
+                        lat_lon = get_lat_lon_from_gps_info(gps_info)
+                        date_taken = None
+
+                        if "DateTimeOriginal" in exif_data:
+                            date_taken_str = exif_data["DateTimeOriginal"]
+                            date_taken = datetime.strptime(date_taken_str, "%Y:%m:%d %H:%M:%S")
+
+                        if lat_lon and date_taken:
+                            geo_data_list.append([file, lat_lon[0], lat_lon[1], date_taken])
+                            total_count += 1
+
+        except Exception as e:
+            print(f"Fehler beim Öffnen des Bildes: {e}")
 
 # Sortieren der Liste nach Datum und Uhrzeit
 geo_data_list.sort(key=lambda x: x[3])
@@ -51,7 +86,7 @@ for file, lat, lon, date_taken in geo_data_list:
     lon_decimal = float(lon)
     print(file.ljust(12), f"{lat_decimal:.6f}".ljust(14), f"{lon_decimal:.6f}".ljust(14), date_taken.strftime("%Y-%m-%d %H:%M:%S"))
 
-    # Fügen Sie Marker zur Karte hinzu
+     # Fügen Sie Marker zur Karte hinzu
     folium.Marker([lat_decimal, lon_decimal], tooltip=file).add_to(m)
     coordinates.append([lat_decimal, lon_decimal])
 
@@ -80,3 +115,4 @@ webbrowser.open(map_file)
 
 # Ausgabe der Anzahl der ausgewerteten Bilder
 print(f"\nAnzahl der ausgewerteten Bilder: {total_count}")
+
