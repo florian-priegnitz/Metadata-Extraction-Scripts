@@ -6,10 +6,23 @@ Dieses Repository enthält eine Sammlung von Python-Skripten zur Extraktion von 
 
 Mit dem Python-Skript `extract_jpg_metadata.py` können die Metadaten von einer JPG-Datei ausgelesen werden. Hierbei werden die EXIF-Metadaten aus der Bilddatei und mittels print Befehl angezeigt.
 
+1. Das Skript fordert den Benutzer auf, den Pfad zum Bild einzugeben.
+2. Es öffnet das angegebene Bild mit der Image.open()-Funktion aus der Pillow-Bibliothek.
+3. Das Skript überprüft, ob das Bild EXIF-Daten enthält, indem es die _getexif()-Funktion aufruft.
+4. Falls vorhanden, werden die EXIF-Daten extrahiert und die Tags decodiert, um lesbare Namen für die Metadaten zu erhalten.
+5. Zum Schluss gibt das Skript die extrahierten EXIF-Metadaten in der Konsole aus.
+
+Was sind EXIF-Metadaten?
+https://de.wikipedia.org/wiki/Exchangeable_Image_File_Format
+
 ### Abhängigkeiten
 
 - Python 3.6+
 - Pillow (PIL Fork)
+
+```PYTHON
+pip install Pillow
+```
 
 
 ## Script 2) Exif Metadaten aus einem Ordner von Bildern auslesen
