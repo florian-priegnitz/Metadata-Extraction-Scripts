@@ -62,3 +62,32 @@ Metadaten werden dann wie folgt ausgegeben und abgespeichert:
 /Users/username/Desktop/Auswertung_Metadaten/Metadaten_2023-04-04_12-30-45.csv 
 ```
 
+## Script 4) Geodaten von Bildern auf einer Karte als Pin anzeigen
+
+Das Python-Skript `display_jpg_geodata_on_map.py` extrahiert die Geodaten (Breitengrad und Längengrad) aus den EXIF-Metadaten aller .jpg und .jpeg Bilder in einem angegebenen Ordner und zeigt die Geodaten auf einer Karte an. Die Karte wird im Ordner "Auswertung_Geodaten" auf Ihrem Desktop als HTML-Datei gespeichert und im Webbrowser geöffnet.
+
+### Verwendung
+
+Um das Skript zu verwenden, führen Sie den folgenden Befehl aus:
+```PYTHON
+display_jpg_geodata_on_map.py
+```
+
+Es muss danach eine Pfadangbae gemacht werden
+```PYTHON
+/path/to/your/image/folder
+```
+In der Textausgabe sind Details zur Auswertung ersichtlich: 
+```PYTHON
+Bilder mit Geodaten:
+Bild Breitengrad Längengrad
+IMG_001.jpg 52.520008 13.404954
+IMG_002.jpg 48.856613 2.352222
+
+Anzahl der ausgewerteten Bilder: 10
+```
+
+Ein neuer Tab im Webbrowser wird geöffnet und zeigt die Karte mit den Geodaten der Bilder an. Darüber hinaus wird die Karte im folgenden Folder abgelegt:
+```PYTHON
+C:/Users/User/Desktop/Auswertung_Geodaten/image_map.html
+```
