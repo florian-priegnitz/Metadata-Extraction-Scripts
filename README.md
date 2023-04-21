@@ -29,6 +29,13 @@ Alle erforderlichen Pakete können wie folgt installiert werden:
 pip install -r requirements.txt
 ```
 
+## Einsatz von Chat-GPT 4
+Hiermit mache ich den Einsatz von Chat-GPT in der Version 4 kenntlich.
+- Alle Scripts wurden nachträglich mit Chat-GPT 4 debugged.
+- Die Scripts 1-3 basieren noch auf meinem ursprünglichen Entwurf
+- Das modulare Vorgehen in den späteren Scripts wurde von GPT 4 vorgeschlagen.
+- Sowohl die Geodaten-Scripts als auch die erweiterten Bildtypen-Scripts hätte ich ohne GPT 4 nicht alleine erstellen können. Gerade das Formatieren von Geodaten zu den passenden Längen- und Breitengraden wäre mir sonst nicht gelungen.
+
 ## Script 1) Exif Metadaten aus JPG-Bild-Datei auslesen
 
 Mit dem Python-Skript `extract_jpg_metadata.py` können die Metadaten von einer JPG-Datei ausgelesen werden. Hierbei werden die EXIF-Metadaten aus der Bilddatei und mittels print Befehl angezeigt.
