@@ -136,5 +136,5 @@ Das Python-Skript `export_metadaten_jpg_png_raw_tiff_to_csv.py` extrahiert die E
 
 ### Verwendung
 
-Das Script kann analog wie die anderen Skripts verwendet werden.  Die erstellte CSV-Datei enthält alle Metadaten der unterstützten Bildformate im angegebenen Ordner.
+Das Script kann analog wie die anderen Skripts verwendet werden.  Die erstellte CSV-Datei enthält alle Metadaten der unterstützten Bildformate in einer Datei im angegebenen Ordner.
 
